@@ -16,13 +16,13 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(express.urlencoded({ extended: false }))
 
-// app.use(
-//   sessions({
-//     secret:"mysecretkey",
-//     cookie: { maxAge: 1000 * 60 * 60 * 24 },
-//     resave: true,
-//   })
-// )
+app.use(
+  sessions({
+    secret: "mysecretkey",
+    cookie: { maxAge: 1000 * 60 * 60 * 24 },
+    resave: true,
+  })
+)
 
 app.use("/v1", apiV1)
 
