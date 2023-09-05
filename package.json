@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon src/app",
+    "start": "npx nodemon",
     "lint": "prettier --write ."
   },
   "dependencies": {
