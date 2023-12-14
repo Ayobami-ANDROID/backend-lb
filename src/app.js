@@ -5,6 +5,7 @@ const express = require("express")
 const morgan = require("morgan")
 const cookieParser = require("cookie-parser")
 const sessions = require("express-session")
+var cors = require('cors')
 const { apiV1 } = require("./routes")
 const { connectDb } = require("./db")
 const { UserModel } = require("./models/user")
@@ -16,6 +17,7 @@ app.use(morgan("dev"))
 app.use(express.json())
 app.use(cookieParser())
 app.use(express.urlencoded({ extended: false }))
+app.use(cors());
 
 app.use(
   sessions({
